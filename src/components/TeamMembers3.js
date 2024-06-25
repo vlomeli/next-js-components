@@ -5,7 +5,7 @@ function TeamMember3({ name, role, bio, imageUrl, skills }) {
 
   return (
     <div
-      className="w-72 h-96 perspective-1000"
+      className="w-64 h-80 perspective-1000" // Reduced from w-72 h-96
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
     >
@@ -16,29 +16,34 @@ function TeamMember3({ name, role, bio, imageUrl, skills }) {
       >
         {/* Front of the card */}
         <div className="absolute w-full h-full backface-hidden">
-          <div className="w-full h-full bg-gradient-to-br from-pink-400 to-purple-500 rounded-xl shadow-xl overflow-hidden flex flex-col justify-center items-center p-4">
-            <div className="mb-4">
+          <div className="w-full h-full bg-gradient-to-br from-pink-400 to-purple-500 rounded-xl shadow-xl overflow-hidden flex flex-col justify-center items-center p-3">
+            <div className="mb-3">
               <img
                 src={imageUrl}
                 alt={name}
-                className="w-32 h-32 object-cover rounded-full border-4 border-white shadow-lg"
+                className="w-28 h-28 object-cover rounded-full border-4 border-white shadow-lg" // Reduced from w-32 h-32
               />
             </div>
-            <h3 className="text-xl font-bold text-white text-center mt-2">
+            <h3 className="text-lg font-bold text-white text-center mt-2">
               {name}
             </h3>
-            <p className="text-sm text-pink-100 text-center mt-1">{role}</p>
+            <p className="text-xs text-pink-100 text-center mt-1">
+              
+              {role}
+            </p>
           </div>
         </div>
 
         {/* Back of the card */}
         <div className="absolute w-full h-full backface-hidden rotate-y-180">
-          <div className="w-full h-full bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl shadow-xl p-4 flex flex-col justify-between">
+          <div className="w-full h-full bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl shadow-xl p-3 flex flex-col justify-between">
             <div>
-              <h3 className="text-xl font-bold text-white mb-2">{name}</h3>
-              <p className="text-sm text-purple-100 mb-2">{bio}</p>
-              <h4 className="text-lg font-semibold text-white mb-2">Skills:</h4>
-              <ul className="list-disc list-inside text-sm text-purple-100">
+              <h3 className="text-lg font-bold text-white mb-1">{name}</h3>
+              <p className="text-xs text-purple-100 mb-2">{bio}</p>
+              <h4 className="text-base font-semibold text-white mb-1">
+                Skills:
+              </h4>
+              <ul className="list-disc list-inside text-xs text-purple-100">
                 {skills.map((skill, index) => (
                   <li key={index}>{skill}</li>
                 ))}
@@ -97,16 +102,15 @@ export default function TeamMembers3() {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-gray-900 to-gray-800 py-16 sm:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-extrabold text-center text-white mb-12">
-          Our Stellar Team
+    <div className="bg-gradient-to-r from-gray-900 to-gray-800 py-12 sm:py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 className="text-3xl font-extrabold text-center text-white mb-8"> Meet the Team
         </h1>
         <div className="relative">
           <div className="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-gray-900 to-transparent z-10"></div>
           <div className="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-gray-800 to-transparent z-10"></div>
-          <div className="flex overflow-x-auto pb-8 scrollbar">
-            <div className="flex space-x-6 px-4">
+          <div className="flex overflow-x-auto pb-6 scrollbar">
+            <div className="flex space-x-4 px-4">
               {teamMembers.map((member, index) => (
                 <TeamMember3 key={index} {...member} />
               ))}
