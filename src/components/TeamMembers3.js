@@ -16,25 +16,27 @@ function TeamMember3({ name, role, bio, imageUrl, skills }) {
       >
         {/* Front of the card */}
         <div className="absolute w-full h-full backface-hidden">
-          <div className="w-full h-full bg-gradient-to-br from-pink-400 to-purple-500 rounded-xl shadow-xl overflow-hidden">
-            <img
-              src={imageUrl}
-              alt={name}
-              className="w-full h-2/3 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-bold text-white">{name}</h3>
-              <p className="text-sm text-pink-100">{role}</p>
+          <div className="w-full h-full bg-gradient-to-br from-pink-400 to-purple-500 rounded-xl shadow-xl overflow-hidden flex flex-col justify-center items-center p-4">
+            <div className="mb-4">
+              <img
+                src={imageUrl}
+                alt={name}
+                className="w-32 h-32 object-cover rounded-full border-4 border-white shadow-lg"
+              />
             </div>
+            <h3 className="text-xl font-bold text-white text-center mt-2">
+              {name}
+            </h3>
+            <p className="text-sm text-pink-100 text-center mt-1">{role}</p>
           </div>
         </div>
 
         {/* Back of the card */}
         <div className="absolute w-full h-full backface-hidden rotate-y-180">
-          <div className="w-full h-full bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl shadow-xl p-6 flex flex-col justify-between">
+          <div className="w-full h-full bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl shadow-xl p-4 flex flex-col justify-between">
             <div>
               <h3 className="text-xl font-bold text-white mb-2">{name}</h3>
-              <p className="text-sm text-purple-100 mb-4">{bio}</p>
+              <p className="text-sm text-purple-100 mb-2">{bio}</p>
               <h4 className="text-lg font-semibold text-white mb-2">Skills:</h4>
               <ul className="list-disc list-inside text-sm text-purple-100">
                 {skills.map((skill, index) => (
