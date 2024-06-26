@@ -63,7 +63,7 @@ export default function TeamMembers3() {
       name: "Zoe Chen",
       role: "Full Stack Developer",
       bio: "Zoe is a coding polyglot with a passion for creating seamless user experiences across the entire stack.",
-      imageUrl: "https://randomuser.me/api/portraits/women/5.jpg",
+      imageUrl: "https://randomuser.me/api/portraits/women/8.jpg",
       skills: ["React", "Node.js", "Python", "AWS"],
     },
     {
@@ -77,7 +77,7 @@ export default function TeamMembers3() {
       name: "Lena Kim",
       role: "Data Scientist",
       bio: "Lena turns complex data into actionable insights, driving data-informed decisions across the company.",
-      imageUrl: "https://randomuser.me/api/portraits/women/6.jpg",
+      imageUrl: "https://randomuser.me/api/portraits/women/11.jpg",
       skills: ["Machine Learning", "Python", "R", "Data Visualization"],
     },
     {
@@ -91,7 +91,7 @@ export default function TeamMembers3() {
       name: "Sofia Rodriguez",
       role: "Product Manager",
       bio: "Sofia translates user needs into product features, guiding our development roadmap with strategic vision.",
-      imageUrl: "https://randomuser.me/api/portraits/women/7.jpg",
+      imageUrl: "https://randomuser.me/api/portraits/women/14.jpg",
       skills: [
         "Agile Methodologies",
         "Market Research",
